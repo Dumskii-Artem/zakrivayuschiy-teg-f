@@ -44,11 +44,6 @@
     transition: fill 0.3s ease;
 }
 
-.card__icon-button:hover .core {
-    fill: var(--heart-contour-color);
-    transition: fill 0.3s ease;
-}
-  
 .card__icon-button:hover .main-body {
     fill: var(--heart-contour-color);
     transition: fill 0.3s ease 0.05s;
