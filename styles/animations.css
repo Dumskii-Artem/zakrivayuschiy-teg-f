@@ -30,50 +30,52 @@
 /* Переход в исходное состояние */
 .card__icon-button .core {
     fill: transparent;
-    transition: fill 0.3s ease 0.03s;
+    transition: fill var(--time_step) ease 0.03s;
 }
 
 .button_heart .main-body {
     fill: transparent;
-    transition: fill 0.3s ease 0s;
+    transition: fill var(--time_step) ease 0s;
   }
 
 /* hover, active */
 .card__icon-button:hover .core {
     fill: var(--heart-contour-color);
-    transition: fill 0.3s ease;
+    transition: fill var(--time_step) ease;
 }
 
 .card__icon-button:hover .main-body {
     fill: var(--heart-contour-color);
-    transition: fill 0.3s ease 0.05s;
+    transition: fill var(--time_step) ease 0.05s;
 }
 
 .card__icon-button:active .core {
     fill: var(--heart-sparks-color);
-    transition: fill 2.3s ease;
+    transition: fill var(--time_step) ease;
 }
 
 .card__icon-button:active .main-body {
     fill: var(--heart-sparks-color);
-    transition: fill 2.3s ease 0.05s;
+    transition: fill var(--time_step) ease 0.05s;
 }
 
 
 /* Лайкнули! */
+
 .card__icon-button .is-liked .core {
     fill: var(--heart-sparks-color);
-    transition: fill 0.3s linear 0s;
+    transition: fill var(--time_step) linear 0s;
 }
-  
+
+
 .card__icon-button .is-liked .main-body {
     fill: var(--heart-sparks-color);
-    transition: fill 0.3s linear 0.05s;
+    transition: fill var(--time_step) linear 0.05s;
 }
 
 .card__icon-button .is-liked .contour {
     fill: var(--heart-sparks-color);
-    transition: fill 0.3s linear 0.06s;
+    transition: fill var(--time_step) linear 0.06s;
 }
 
 .card__icon-button .is-liked .heart {
@@ -82,5 +84,10 @@
 }
   
 .card__icon-button .is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s 1;
+    animation: sparks var(--time_step) ease-in var(--time_step) 1;
+}
+
+.card__icon-button:focus-visible {
+    outline-color: black;
+    transition:  outline-color var(--time_step) linear;
 }

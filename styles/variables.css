@@ -10,8 +10,8 @@
     --color: #000;
     --shadow-color: #fff;
     --background-color: #fff;
-  
-    --content-size: 375px, 100%, 700px;
+      
+/*    --content-size: 375px, 100%, 700px;*/
 
     --button-font-size: 14px;
     --button-text-color: #fff;
@@ -28,4 +28,11 @@
       ),
       repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+    --time_step: 0.3s;
+
+    --page-width: clamp(21.563rem, -1.875rem + 100vw, 41.875rem);
+    --header-title-font-size: clamp(3.063rem, 1.909rem + 4.92vw, 4.063rem);
+    --header-subtitle-font-size: clamp(0.875rem, 0.226rem + 2.77vw, 1.438rem);
+
 }

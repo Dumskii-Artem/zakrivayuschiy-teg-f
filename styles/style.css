@@ -15,15 +15,22 @@
     font-family: var(--main-font);
     font-variation-settings: "wght" var(--text-weight);
     font-size: var(--font-size);
+
     background-image: var(--background-image);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
     max-inline-size: 700px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.main,
+.header {
+  width: var(--page-width);
 }
 
 .header {
@@ -39,20 +46,20 @@
   padding-block: 128px;
   margin-block: 100px;
 }
-
+/*
 .header_size {
   width: clamp(var(--content-size));
-}
+}*/
 
 .header_title {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: var(--header-title-font-size);
   font-weight: var(--text-weight);
   line-height: 100%;
   margin-block-end: 20px;
 }
 
 .header_subtitle {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-size: var(--header-subtitle-font-size);
 }
 
 .main {
@@ -76,7 +83,9 @@
 
 .article {
   outline: 2px solid var(--color);
-  width: clamp(var(--content-size));
+  width: 100%;
+/*  width: clamp(var(--content-size));*/
+  background-color: white;
 }
 
 .article_title {
@@ -84,11 +93,13 @@
   font-variation-settings: "wght" var(--title-weight);
   color: var(--color);
   background-color: var(--background-color);
+  font-size: var(--font-size);
 }
 
 .article_image_box {
   position: relative;
   margin: 0;
+  outline: var(--main-border);
 }
 
 .card_label {
@@ -99,7 +110,7 @@
   font-weight: var(--text-weight);
   font-size: var(--font-size-card-label);
   text-shadow: 0 0 1px var(--shadow-color);
-  -webkit-text-stroke: 1px var(--shadow-color);
+/*  -webkit-text-stroke: 1px var(--shadow-color);*/
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 1;
@@ -167,19 +178,26 @@
   height: 28px;
 }
 
+.dialog_floppy_svg {
+  width: 50px;
+  height: 50px;
+}
+
 .card__like-button {
   padding-block: 8px;
   align-self: end;
+  width: 130px;
 }
 
 .card__icon-button {
+  height: 34px;
   display: flex;
-/*  background-color: transparent;*/
+  background-color: transparent;
   border: none;
+  outline: 2px solid transparent;
   transition: outline 0.3s ease;
   align-self: center;
   padding-inline: 0;
-  outline: 2px solid transparent;
 }
 
 .mix_difference {
@@ -197,7 +215,7 @@
     cursor: pointer;
     font-family: var(--accent-font);
     justify-content: center;
-    min-inline-size: 130px;
+ /*   min-inline-size: 130px;*/
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.3s ease;
@@ -243,9 +261,12 @@
   box-shadow: 2px 2px 0 1px var(--color);
 }
 
-.floppy_dialog {
-  position: fixed;
-  inset: 0;
+/*.floppy_dialog {
+}*/
+
+.floppy_dialog[open] {
+  /*position: fixed;*/
+ /* inset: 0;*/
   border: var(--main-border);
   padding: 31px 42px;
   min-inline-size: 341px;
@@ -256,7 +277,7 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.body:has(.floppy_dialog[open]) {
+body:has(.floppy_dialog[open]) {
   overflow: hidden;
 }
 
@@ -285,18 +306,31 @@
   text-transform: uppercase;
 }
 
+.article_image {
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  max-block-size: 100%;
+/*
+  width: 100%;
+  height: 100%;
+  object-fit: cover;*/
+}
+
 @supports (
   (text-stroke: 1px var(--shadow-color)) or
-    (-webkit-text-stroke: 1px var(--shadow-color))
-) {
-
-  .img__label {
+    (-webkit-text-stroke: 1px var(--shadow-color))) {
+  .card_label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
     text-stroke: 1px var(--shadow-color);
   }
 }
 
+
+/*
 @media (width <= 375px) {
 
   .main,
@@ -314,29 +348,20 @@
     margin-bottom: 26vw;
     aspect-ratio: 125/109;
   }
-
+/*
   .header_title {
-    font-weight: 400;
-    font-size: 49px;
     line-height: 49px;
-    letter-spacing: 0%;
+    letter-spacing: normal;
   }
 
   .header_subtitle {
     font-size: 14px;
   }
-
+*/
+/*
   .card_label {
     top: 20px;
     right: 10px;
-  }
-
-  .article_title {
-    font-size: 18px;
-  }
-
-  .card_text {
-    font-size: 18px;
   }
 
   .save_button {
@@ -347,4 +372,4 @@
   }
 }
 
-
+*/
