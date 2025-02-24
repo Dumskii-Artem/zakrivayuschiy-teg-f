@@ -304,6 +304,7 @@ body:has(.floppy_dialog[open]) {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .article_image {
