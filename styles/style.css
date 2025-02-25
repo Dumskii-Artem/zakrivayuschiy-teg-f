@@ -11,7 +11,7 @@
 */
 
 .page {
-    min-block-size: 100dvb;
+  /*  min-block-size: 100dvb;*/
     font-family: var(--main-font);
     font-variation-settings: "wght" var(--text-weight);
     font-size: var(--font-size);
@@ -21,7 +21,7 @@
     background-position: center;
     background-attachment: fixed;
 
-    max-inline-size: 700px;
+  /*  max-inline-size: 700px;*/
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -261,12 +261,15 @@
   box-shadow: 2px 2px 0 1px var(--color);
 }
 
-/*.floppy_dialog {
+/*
+.floppy_dialog {
 }*/
 
 .floppy_dialog[open] {
   /*position: fixed;*/
  /* inset: 0;*/
+ /* display: flex;*/
+  flex-shrink: 0;
   border: var(--main-border);
   padding: 31px 42px;
   min-inline-size: 341px;

@@ -6,8 +6,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
-/*  border 5px solid red;
-  outline 5px solid red;*/
+/*  border 5px solid red;*/
+  /*outline: 10px solid red;*/
 }
 
 body {
