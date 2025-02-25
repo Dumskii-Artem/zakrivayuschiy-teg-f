@@ -331,7 +331,7 @@ body:has(.floppy_dialog[open]) {
 }
 
 
-/*
+
 @media (width <= 375px) {
 
   .main,
@@ -349,17 +349,16 @@ body:has(.floppy_dialog[open]) {
     margin-bottom: 26vw;
     aspect-ratio: 125/109;
   }
-/*
+
   .header_title {
     line-height: 49px;
     letter-spacing: normal;
   }
-
+/*
   .header_subtitle {
     font-size: 14px;
   }
 */
-/*
   .card_label {
     top: 20px;
     right: 10px;
@@ -369,8 +368,8 @@ body:has(.floppy_dialog[open]) {
     flex-direction: column;
     width: 306px;
     height: 84px;
-    margin: 30px 34.5px;
+    margin: 0;
   }
 }
 
-*/
+
