@@ -32,7 +32,7 @@
     --time_step: 0.3s;
 
 /*    --page-width: clamp(23.438rem, 0rem + 100vw, 43.75rem);*/
-    --page-width: clamp(18.75rem, 100%, 43.75rem);
+    --page-width: clamp(18.75rem, 100%, 43.5rem);
     --header-title-font-size: clamp(3.063rem, 1.909rem + 4.92vw, 4.063rem);
     --header-subtitle-font-size: clamp(0.875rem, 0.226rem + 2.77vw, 1.438rem);
 

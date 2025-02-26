@@ -44,7 +44,7 @@
   outline: 2px solid var(--color);
   background-color: var(--background-color);
   padding-block: 128px;
-  margin-block: 100px;
+  margin-block: 103px;
 }
 /*
 .header_size {
@@ -64,7 +64,7 @@
 
 .main {
   display: grid;
-  row-gap: 50px;
+ /* row-gap: 54px;*/
   margin-block-end: 100px;
   justify-items: center;
 }
@@ -86,6 +86,11 @@
   width: 100%;
 /*  width: clamp(var(--content-size));*/
   background-color: white;
+  margin-bottom: 54px;
+}
+
+.article:last-of-type {
+  margin-bottom: 52px;
 }
 
 .article_title {
@@ -98,7 +103,7 @@
 
 .article_image_box {
   position: relative;
-  margin: 0;
+  margin: 0px 0px 5px 0px;
   outline: var(--main-border);
 }
 
@@ -117,7 +122,7 @@
 }
 
 .article_info {
-  padding: 25px;
+  padding: 24px 24px 25px 26px;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -174,8 +179,8 @@
 }
 
 .floppy_svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .dialog_floppy_svg {
@@ -222,14 +227,14 @@
 }
 
 .save_button {
-  width: 335px;
+  width: 340px;
 /* height: 84px;*/
   min-height: 55px;
 /* margin: 30px 34.5px;*/
 
   /*line-height: 90%;*/
   /*text-align: center;*/
-  gap: 8px;
+  gap: 4px;
   display: flex;
   /*border: var(--main-border);*/
 }
@@ -237,6 +242,7 @@
 .decorated_button_text {
     font-size: var(--button-font-size);
     mix-blend-mode: difference;
+    margin-right: 5px;
 }
 
 .decorated_button::before {
@@ -271,9 +277,9 @@
  /* display: flex;*/
   flex-shrink: 0;
   border: var(--main-border);
-  padding: 31px 42px;
-  min-inline-size: 341px;
-  max-inline-size: 353px;
+  padding: 30px;
+/*  min-inline-size: 341px;*/
+  inline-size: 354px;
 }
 
 .floppy_dialog[open]::backdrop {
@@ -284,16 +290,18 @@ body:has(.floppy_dialog[open]) {
   overflow: hidden;
 }
 
+
 .dialog_description {
   display: flex;
   align-items: center;
-  gap: 13px;
-  padding-bottom: 30px;
+  gap: 18px;
+  padding-bottom: 27px;
+  padding-top: 5px;
 }
 
 .dialog_button {
-  max-inline-size: 90%;
-  min-inline-size: 255px;
+  inline-size: 100%;
+ /* min-inline-size: 255px;*/
   min-block-size: 38px;
 }
 
@@ -342,15 +350,16 @@ body:has(.floppy_dialog[open]) {
   .footer {
     width: 100%;
   }
-
+/*
   .main {
-    gap: 25px;
+    row-gap: 54px;
   }
-
+*/
   .header {
     margin-top: 27vw;
-    margin-bottom: 26vw;
-    aspect-ratio: 125/109;
+    margin-bottom: 28vw;
+        /* aspect-ratio: 235 / 109; */
+    block-size: 325px;
   }
 
   .header_title {
@@ -362,6 +371,11 @@ body:has(.floppy_dialog[open]) {
     font-size: 14px;
   }
 */
+
+  .article_info {
+    padding: 20px 27px 25px 27px;
+  }
+
   .card_label {
     top: 20px;
     right: 10px;
@@ -369,9 +383,20 @@ body:has(.floppy_dialog[open]) {
 
   .save_button {
     flex-direction: column;
-    width: 306px;
+    width: 312px;
     height: 84px;
     margin: 0;
+    gap: 4px;
+  }
+
+  .floppy_svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .decorated_button_text {
+    margin-right: 2px;
+    margin-bottom: 4px;
   }
 }
 

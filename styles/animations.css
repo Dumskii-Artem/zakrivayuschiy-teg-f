@@ -78,8 +78,8 @@
     transition: fill var(--time_step) linear 0.06s;
 }
 
-.card__icon-button .is-liked .heart {
-    animation: like 1s ease-in 0.1s 1;
+.card__icon-button .is-liked {
+    animation: like  var(--time_step) ease-in 0.1s 1;
     transform-origin: center;
 }
   
