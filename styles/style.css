@@ -137,23 +137,23 @@
 }
 
 .filter_brightness {
-  filter: brightness(200%);
+  filter: brightness(110%);
 }
 
 .filter_opacity {
-  filter: opacity(0.7);
+  filter: opacity(0.9);
 }
 
 .filter_hue-rotate {
-  filter: hue-rotate(-90deg);
+  filter: hue-rotate(-10deg);
 }
 
 .filter_sepia {
-  filter: sepia(80%);
+  filter: sepia(95%);
 }
 
 .filter_invert {
-  filter: invert(0.75);
+  filter: invert(0.10);
 }
 
 .filter_grayscale {
@@ -161,11 +161,14 @@
 }
 
 .filter_blur {
-  filter: blur(0.5rem);
+  filter: blur(0.02rem);
 }
 
 .filter_multy {
-  filter: grayscale(1.0) invert(0.7) blur(0.2rem) ;
+  filter: sepia(1) hue-rotate(264deg) saturate(289%);
+/*
+  grayscale(1.0) invert(0.95) blur(0.01rem) hue-rotate(300deg) ;
+*/
 }
 
 .sparks {
@@ -258,14 +261,15 @@
   outline: 2px solid var(--color);
 }
 
-.decorated_button:hover::before {
-  translate: 0%;
-}
-
 .decorated_button:focus {
   outline: none;
   box-shadow: 2px 2px 0 1px var(--color);
 }
+
+.decorated_button:hover::before {
+  translate: 0%;
+}
+
 
 /*
 .floppy_dialog {
